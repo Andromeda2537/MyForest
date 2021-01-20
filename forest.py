@@ -1,4 +1,5 @@
 from random import randint
+from mammals import hare_hunger, wolf_hunger, mammal_goes_to_eat
 
 
 def mountain_forest():
@@ -33,4 +34,6 @@ def bird_reaction():
 if __name__ == '__main__':
     while True:
         sped_increased_by = wind_speed()
-        print(forest_reaction(), bird_reaction())
+        hunger_for_hare = hare_hunger()
+        hunger_for_wolf = wolf_hunger()
+        print(forest_reaction(), bird_reaction(), mammal_goes_to_eat(hunger_for_wolf, hunger_for_hare))
